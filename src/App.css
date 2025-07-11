@@ -13,8 +13,11 @@
   }
 }
 
+.test {
+  color: red;
+}
 .App-header {
-  background-color: #282c34;
+  background-color: none;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -35,4 +38,13 @@
   to {
     transform: rotate(360deg);
   }
+}
+.navbar {
+  display: flex;
+  gap: 100px;
+}
+.navbar li a:hover, a.active {
+
+    background-color: #ddd;
+    color: black;
 }
