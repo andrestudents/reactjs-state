@@ -6,6 +6,7 @@ import './App.css';
 // import Button from './components/Button';
 import Navbar from './components/Navbar';
 import React, { useState } from 'react'
+import Footer from './components/Footer';
 function App() {
   const [getvalue, setvalue] = useState(btc)
 
@@ -16,7 +17,9 @@ function App() {
   const NavHeading = "JUDUL NAVBAR"
   const NavKontak = "CONTACT"
   const NavAbout = "ABOUT"
-
+  const footer = () => {
+    return <i> Ini adalah footer Italic style</i>
+  }
   return (
 
     <div className="App">
@@ -28,6 +31,7 @@ function App() {
 
         <button onClick={() => changebutton()}>CHANGE</button>
         {/* <Button /> */}
+        <Footer kaki={footer} />
       </header>
     </div>
   );
