@@ -7,23 +7,26 @@ import './App.css';
 import Navbar from './components/Navbar';
 import React, { useState } from 'react'
 function App() {
-  const [getvalue, setvalue] = useState("")
+  const [getvalue, setvalue] = useState(btc)
 
   const changebutton = () => {
-    setvalue(btc)
+    setvalue(g)
   }
+
+  const NavHeading = "JUDUL NAVBAR"
+  const NavKontak = "CONTACT"
+  const NavAbout = "ABOUT"
+
   return (
 
     <div className="App">
       <header className="App-header">
-        <Navbar />
+        <Navbar Navheading={NavHeading} Navkontak={NavKontak} Navabout={NavAbout} />
         <div>
-          {/* <img src={btc} className="App-logo" alt="logo" /> */}
-          <img src={g} className="App-logo" alt="logo" />
+          {getvalue && <img src={getvalue} className="App-logo" alt="logo" />}
         </div>
 
-        {getvalue && <img src={getvalue} className="App-logo" alt="logo" />}
-        <button onClick={() => changebutton()}>Click Me Bro</button>
+        <button onClick={() => changebutton()}>CHANGE</button>
         {/* <Button /> */}
       </header>
     </div>
@@ -31,3 +34,5 @@ function App() {
 }
 
 export default App;
+
+

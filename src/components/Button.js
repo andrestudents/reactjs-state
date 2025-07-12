@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 const Button = () => {
-    // buat latihan cek diconsole dan alert
+    // cek diconsole dan alert
     // const tracebutton = () => {
     //     alert("Button Clicked")
     //     console.log("Button Clicked")
