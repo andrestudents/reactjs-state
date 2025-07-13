@@ -8,11 +8,19 @@ import Navbar from './components/Navbar';
 import React, { useState } from 'react'
 import Footer from './components/Footer';
 function App() {
-  const [getvalue, setvalue] = useState(btc)
 
+  // const [getvalue, setvalue] = useState(btc)
+
+  // const changebutton = () => {
+  //   setvalue(g)
+  // }
+
+
+  const images = [btc, g];
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const changebutton = () => {
-    setvalue(g)
-  }
+    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+  };
 
   const NavHeading = "JUDUL NAVBAR"
   const NavKontak = "CONTACT"
@@ -26,7 +34,12 @@ function App() {
       <header className="App-header">
         <Navbar Navheading={NavHeading} Navkontak={NavKontak} Navabout={NavAbout} />
         <div>
-          {getvalue && <img src={getvalue} className="App-logo" alt="logo" />}
+
+          {/* {getvalue && <img src={getvalue} className="App-logo" alt="logo" />} */}
+
+          {/* Tampilkan gambar sesuai index */}
+          {images[currentImageIndex] && <img src={images[currentImageIndex]} className="App-logo" alt="logo" />}
+
         </div>
 
         <button onClick={() => changebutton()}>CHANGE</button>
